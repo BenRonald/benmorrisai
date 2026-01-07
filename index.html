@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ben Morris AI - Coming Soon</title>
-    <meta name="description" content="Ben Morris AI - Innovative AI solutions coming soon.">
+    <title>Ben Morris AI</title>
+    <meta name="description" content="Ben Morris AI - Helping You Build The Future">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,171 +16,76 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%);
+            background: #0a0a0b;
             color: #ffffff;
             overflow: hidden;
             position: relative;
         }
 
-        .background-glow {
+        .gradient-bg {
             position: absolute;
-            width: 600px;
-            height: 600px;
-            border-radius: 50%;
-            filter: blur(120px);
-            opacity: 0.15;
-            pointer-events: none;
-        }
-
-        .glow-1 {
-            top: -200px;
-            left: -200px;
-            background: #4f46e5;
-        }
-
-        .glow-2 {
-            bottom: -200px;
-            right: -200px;
-            background: #06b6d4;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(120, 119, 198, 0.15), transparent),
+                radial-gradient(ellipse 60% 40% at 50% 120%, rgba(79, 70, 229, 0.1), transparent);
         }
 
         .container {
             text-align: center;
             padding: 2rem;
-            max-width: 600px;
             position: relative;
             z-index: 1;
+            animation: fadeUp 1.2s ease-out;
         }
 
-        .logo {
-            font-size: 1rem;
-            font-weight: 600;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: #94a3b8;
-            margin-bottom: 2rem;
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         h1 {
-            font-size: clamp(2.5rem, 8vw, 4rem);
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: clamp(3rem, 12vw, 6rem);
+            font-weight: 300;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+            line-height: 1;
         }
 
         .tagline {
-            font-size: 1.25rem;
-            color: #64748b;
-            margin-bottom: 3rem;
-            font-weight: 400;
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 300;
+            letter-spacing: 0.02em;
+            margin-bottom: 4rem;
         }
 
-        .status {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-            font-size: 0.9rem;
-            color: #94a3b8;
-            margin-bottom: 2.5rem;
-        }
-
-        .cta-section {
-            margin-top: 1rem;
-        }
-
-        .cta-text {
-            color: #64748b;
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
-            background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(79, 70, 229, 0.3);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 30px rgba(79, 70, 229, 0.4);
-        }
-
-        .cta-button svg {
-            width: 18px;
-            height: 18px;
-        }
-
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background: #22c55e;
-            border-radius: 50%;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        .footer {
-            position: absolute;
-            bottom: 2rem;
-            left: 0;
-            right: 0;
-            text-align: center;
-            color: #475569;
-            font-size: 0.875rem;
+        .coming-soon {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.25);
         }
     </style>
 </head>
 <body>
-    <div class="background-glow glow-1"></div>
-    <div class="background-glow glow-2"></div>
+    <div class="gradient-bg"></div>
 
     <div class="container">
-        <div class="logo">Ben Morris AI</div>
-        <h1>Coming Soon</h1>
-        <p class="tagline">Something exciting is in the works.</p>
-        <div class="status">
-            <span class="status-dot"></span>
-            Helping you build the future
-        </div>
-
-        <div class="cta-section">
-            <p class="cta-text">Want an early look? Get in touch.</p>
-            <a href="mailto:ben@benmorris.ai?subject=Early%20Access%20Request" class="cta-button">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                Request Early Access
-            </a>
-        </div>
+        <h1>Ben Morris AI</h1>
+        <p class="tagline">Helping You Build The Future</p>
+        <p class="coming-soon">Coming Soon</p>
     </div>
-
-    <footer class="footer">
-        &copy; 2025 Ben Morris AI
-    </footer>
 </body>
 </html>
